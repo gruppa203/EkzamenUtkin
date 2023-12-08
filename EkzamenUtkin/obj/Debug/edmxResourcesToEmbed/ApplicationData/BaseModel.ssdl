@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BD_UtkinModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "BD_Utkin.dbo.Tovar_Dekor" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Tovar_Dekor">
+    <Key>
+      <PropertyRef Name="T_Artikyl" />
+      <PropertyRef Name="T_Naimenovanie" />
+      <PropertyRef Name="T_EdIzmereniya" />
+      <PropertyRef Name="T_Stoimost" />
+      <PropertyRef Name="T_RazmerSkidki" />
+      <PropertyRef Name="T_Proizvoditel" />
+      <PropertyRef Name="T_Postavshik" />
+      <PropertyRef Name="T_KategoriyaTovara" />
+      <PropertyRef Name="T_Deystvouyasha" />
+      <PropertyRef Name="T_KolichestvoNaSklade" />
+      <PropertyRef Name="T_Opisanie" />
+    </Key>
+    <Property Name="T_Artikyl" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Naimenovanie" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_EdIzmereniya" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Stoimost" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_RazmerSkidki" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Proizvoditel" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Postavshik" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_KategoriyaTovara" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Deystvouyasha" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_KolichestvoNaSklade" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="T_Opisanie" Type="nvarchar" MaxLength="1000" Nullable="false" />
+    <Property Name="T_Izobrazhenie" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "BD_Utkin.dbo.Users" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="U_Roli" />
+      <PropertyRef Name="U_Kod" />
+    </Key>
+    <Property Name="U_Kod" Type="int" Nullable="false" />
+    <Property Name="U_Familia" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="U_Imya" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="U_Otchestvo" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="U_Login" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="U_Parol" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="U_Roli" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище BD_UtkinModelContainer">
+    <EntitySet Name="Tovar_Dekor" EntityType="Self.Tovar_Dekor" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Tovar_Dekor].[T_Artikyl] AS [T_Artikyl], 
+    [Tovar_Dekor].[T_Naimenovanie] AS [T_Naimenovanie], 
+    [Tovar_Dekor].[T_EdIzmereniya] AS [T_EdIzmereniya], 
+    [Tovar_Dekor].[T_Stoimost] AS [T_Stoimost], 
+    [Tovar_Dekor].[T_RazmerSkidki] AS [T_RazmerSkidki], 
+    [Tovar_Dekor].[T_Proizvoditel] AS [T_Proizvoditel], 
+    [Tovar_Dekor].[T_Postavshik] AS [T_Postavshik], 
+    [Tovar_Dekor].[T_KategoriyaTovara] AS [T_KategoriyaTovara], 
+    [Tovar_Dekor].[T_Deystvouyasha] AS [T_Deystvouyasha], 
+    [Tovar_Dekor].[T_KolichestvoNaSklade] AS [T_KolichestvoNaSklade], 
+    [Tovar_Dekor].[T_Opisanie] AS [T_Opisanie], 
+    [Tovar_Dekor].[T_Izobrazhenie] AS [T_Izobrazhenie]
+    FROM [dbo].[Tovar_Dekor] AS [Tovar_Dekor]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Users].[U_Kod] AS [U_Kod], 
+    [Users].[U_Familia] AS [U_Familia], 
+    [Users].[U_Imya] AS [U_Imya], 
+    [Users].[U_Otchestvo] AS [U_Otchestvo], 
+    [Users].[U_Login] AS [U_Login], 
+    [Users].[U_Parol] AS [U_Parol], 
+    [Users].[U_Roli] AS [U_Roli]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

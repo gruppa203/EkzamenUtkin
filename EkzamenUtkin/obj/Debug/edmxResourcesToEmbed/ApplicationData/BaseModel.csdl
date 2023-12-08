@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BD_UtkinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="U_Kod" />
+      <PropertyRef Name="U_Roli" />
+    </Key>
+    <Property Name="U_Kod" Type="Int32" Nullable="false" />
+    <Property Name="U_Familia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="U_Imya" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="U_Otchestvo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="U_Login" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="U_Parol" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="U_Roli" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tovar_Dekor">
+    <Key>
+      <PropertyRef Name="T_Artikyl" />
+      <PropertyRef Name="T_Naimenovanie" />
+      <PropertyRef Name="T_EdIzmereniya" />
+      <PropertyRef Name="T_Stoimost" />
+      <PropertyRef Name="T_RazmerSkidki" />
+      <PropertyRef Name="T_Proizvoditel" />
+      <PropertyRef Name="T_Postavshik" />
+      <PropertyRef Name="T_KategoriyaTovara" />
+      <PropertyRef Name="T_Deystvouyasha" />
+      <PropertyRef Name="T_KolichestvoNaSklade" />
+      <PropertyRef Name="T_Opisanie" />
+    </Key>
+    <Property Name="T_Artikyl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Naimenovanie" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_EdIzmereniya" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Stoimost" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_RazmerSkidki" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Proizvoditel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Postavshik" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_KategoriyaTovara" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Deystvouyasha" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_KolichestvoNaSklade" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Opisanie" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="T_Izobrazhenie" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="BD_UtkinEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Tovar_Dekor" EntityType="Self.Tovar_Dekor" />
+  </EntityContainer>
+</Schema>

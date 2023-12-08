@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище BD_UtkinModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "BD_Utkin.dbo.Tovar_Dekor" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Tovar_Dekor">
+          <Key>
+            <PropertyRef Name="T_Artikyl" />
+            <PropertyRef Name="T_Naimenovanie" />
+            <PropertyRef Name="T_EdIzmereniya" />
+            <PropertyRef Name="T_Stoimost" />
+            <PropertyRef Name="T_RazmerSkidki" />
+            <PropertyRef Name="T_Proizvoditel" />
+            <PropertyRef Name="T_Postavshik" />
+            <PropertyRef Name="T_KategoriyaTovara" />
+            <PropertyRef Name="T_Deystvouyasha" />
+            <PropertyRef Name="T_KolichestvoNaSklade" />
+            <PropertyRef Name="T_Opisanie" />
+          </Key>
+          <Property Name="T_Artikyl" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Naimenovanie" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_EdIzmereniya" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Stoimost" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_RazmerSkidki" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Proizvoditel" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Postavshik" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_KategoriyaTovara" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Deystvouyasha" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_KolichestvoNaSklade" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="T_Opisanie" Type="nvarchar" MaxLength="1000" Nullable="false" />
+          <Property Name="T_Izobrazhenie" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "BD_Utkin.dbo.Users" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Users">
+          <Key>
+            
+            
+            
+            
+            
+            <PropertyRef Name="U_Roli" />
+            <PropertyRef Name="U_Kod" />
+          </Key>
+          <Property Name="U_Kod" Type="int" Nullable="false" />
+          <Property Name="U_Familia" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="U_Imya" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="U_Otchestvo" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="U_Login" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="U_Parol" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="U_Roli" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище BD_UtkinModelContainer">
+          <EntitySet Name="Tovar_Dekor" EntityType="Self.Tovar_Dekor" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Tovar_Dekor].[T_Artikyl] AS [T_Artikyl], 
+    [Tovar_Dekor].[T_Naimenovanie] AS [T_Naimenovanie], 
+    [Tovar_Dekor].[T_EdIzmereniya] AS [T_EdIzmereniya], 
+    [Tovar_Dekor].[T_Stoimost] AS [T_Stoimost], 
+    [Tovar_Dekor].[T_RazmerSkidki] AS [T_RazmerSkidki], 
+    [Tovar_Dekor].[T_Proizvoditel] AS [T_Proizvoditel], 
+    [Tovar_Dekor].[T_Postavshik] AS [T_Postavshik], 
+    [Tovar_Dekor].[T_KategoriyaTovara] AS [T_KategoriyaTovara], 
+    [Tovar_Dekor].[T_Deystvouyasha] AS [T_Deystvouyasha], 
+    [Tovar_Dekor].[T_KolichestvoNaSklade] AS [T_KolichestvoNaSklade], 
+    [Tovar_Dekor].[T_Opisanie] AS [T_Opisanie], 
+    [Tovar_Dekor].[T_Izobrazhenie] AS [T_Izobrazhenie]
+    FROM [dbo].[Tovar_Dekor] AS [Tovar_Dekor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Users" EntityType="Self.Users" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Users].[U_Kod] AS [U_Kod], 
+    [Users].[U_Familia] AS [U_Familia], 
+    [Users].[U_Imya] AS [U_Imya], 
+    [Users].[U_Otchestvo] AS [U_Otchestvo], 
+    [Users].[U_Login] AS [U_Login], 
+    [Users].[U_Parol] AS [U_Parol], 
+    [Users].[U_Roli] AS [U_Roli]
+    FROM [dbo].[Users] AS [Users]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_UtkinModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="U_Kod" />
+            <PropertyRef Name="U_Roli" />
+          </Key>
+          <Property Name="U_Kod" Type="Int32" Nullable="false" />
+          <Property Name="U_Familia" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Imya" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Otchestvo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Login" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Parol" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Roli" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tovar_Dekor">
+          <Key>
+            <PropertyRef Name="T_Artikyl" />
+            <PropertyRef Name="T_Naimenovanie" />
+            <PropertyRef Name="T_EdIzmereniya" />
+            <PropertyRef Name="T_Stoimost" />
+            <PropertyRef Name="T_RazmerSkidki" />
+            <PropertyRef Name="T_Proizvoditel" />
+            <PropertyRef Name="T_Postavshik" />
+            <PropertyRef Name="T_KategoriyaTovara" />
+            <PropertyRef Name="T_Deystvouyasha" />
+            <PropertyRef Name="T_KolichestvoNaSklade" />
+            <PropertyRef Name="T_Opisanie" />
+          </Key>
+          <Property Name="T_Artikyl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Naimenovanie" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_EdIzmereniya" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Stoimost" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_RazmerSkidki" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Proizvoditel" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Postavshik" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_KategoriyaTovara" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Deystvouyasha" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_KolichestvoNaSklade" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Opisanie" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="T_Izobrazhenie" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="BD_UtkinEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Tovar_Dekor" EntityType="Self.Tovar_Dekor" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BD_UtkinModelContainer" CdmEntityContainer="BD_UtkinEntities1">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="BD_UtkinModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="U_Roli" ColumnName="U_Roli" />
+                <ScalarProperty Name="U_Kod" ColumnName="U_Kod" />
+                <ScalarProperty Name="U_Familia" ColumnName="U_Familia" />
+                <ScalarProperty Name="U_Imya" ColumnName="U_Imya" />
+                <ScalarProperty Name="U_Otchestvo" ColumnName="U_Otchestvo" />
+                <ScalarProperty Name="U_Login" ColumnName="U_Login" />
+                <ScalarProperty Name="U_Parol" ColumnName="U_Parol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tovar_Dekor">
+            <EntityTypeMapping TypeName="BD_UtkinModel.Tovar_Dekor">
+              <MappingFragment StoreEntitySet="Tovar_Dekor">
+                <ScalarProperty Name="T_Artikyl" ColumnName="T_Artikyl" />
+                <ScalarProperty Name="T_Naimenovanie" ColumnName="T_Naimenovanie" />
+                <ScalarProperty Name="T_EdIzmereniya" ColumnName="T_EdIzmereniya" />
+                <ScalarProperty Name="T_Stoimost" ColumnName="T_Stoimost" />
+                <ScalarProperty Name="T_RazmerSkidki" ColumnName="T_RazmerSkidki" />
+                <ScalarProperty Name="T_Proizvoditel" ColumnName="T_Proizvoditel" />
+                <ScalarProperty Name="T_Postavshik" ColumnName="T_Postavshik" />
+                <ScalarProperty Name="T_KategoriyaTovara" ColumnName="T_KategoriyaTovara" />
+                <ScalarProperty Name="T_Deystvouyasha" ColumnName="T_Deystvouyasha" />
+                <ScalarProperty Name="T_KolichestvoNaSklade" ColumnName="T_KolichestvoNaSklade" />
+                <ScalarProperty Name="T_Opisanie" ColumnName="T_Opisanie" />
+                <ScalarProperty Name="T_Izobrazhenie" ColumnName="T_Izobrazhenie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

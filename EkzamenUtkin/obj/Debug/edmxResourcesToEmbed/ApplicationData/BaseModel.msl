@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BD_UtkinModelContainer" CdmEntityContainer="BD_UtkinEntities1">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BD_UtkinModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="U_Roli" ColumnName="U_Roli" />
+          <ScalarProperty Name="U_Kod" ColumnName="U_Kod" />
+          <ScalarProperty Name="U_Familia" ColumnName="U_Familia" />
+          <ScalarProperty Name="U_Imya" ColumnName="U_Imya" />
+          <ScalarProperty Name="U_Otchestvo" ColumnName="U_Otchestvo" />
+          <ScalarProperty Name="U_Login" ColumnName="U_Login" />
+          <ScalarProperty Name="U_Parol" ColumnName="U_Parol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tovar_Dekor">
+      <EntityTypeMapping TypeName="BD_UtkinModel.Tovar_Dekor">
+        <MappingFragment StoreEntitySet="Tovar_Dekor">
+          <ScalarProperty Name="T_Artikyl" ColumnName="T_Artikyl" />
+          <ScalarProperty Name="T_Naimenovanie" ColumnName="T_Naimenovanie" />
+          <ScalarProperty Name="T_EdIzmereniya" ColumnName="T_EdIzmereniya" />
+          <ScalarProperty Name="T_Stoimost" ColumnName="T_Stoimost" />
+          <ScalarProperty Name="T_RazmerSkidki" ColumnName="T_RazmerSkidki" />
+          <ScalarProperty Name="T_Proizvoditel" ColumnName="T_Proizvoditel" />
+          <ScalarProperty Name="T_Postavshik" ColumnName="T_Postavshik" />
+          <ScalarProperty Name="T_KategoriyaTovara" ColumnName="T_KategoriyaTovara" />
+          <ScalarProperty Name="T_Deystvouyasha" ColumnName="T_Deystvouyasha" />
+          <ScalarProperty Name="T_KolichestvoNaSklade" ColumnName="T_KolichestvoNaSklade" />
+          <ScalarProperty Name="T_Opisanie" ColumnName="T_Opisanie" />
+          <ScalarProperty Name="T_Izobrazhenie" ColumnName="T_Izobrazhenie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
